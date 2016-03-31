@@ -1,0 +1,25 @@
+{
+  "name": "ba-hungr",
+  "version": "1.0.0",
+  "description": "Tinder for your mouth",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies" : {
+    "express": "*",
+    "path": "*",
+    "ejs": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanhculver/ba-hungr.git"
+  },
+  "author": "Jon Culver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathanhculver/ba-hungr/issues"
+  },
+  "homepage": "https://github.com/jonathanhculver/ba-hungr#readme"
+}
