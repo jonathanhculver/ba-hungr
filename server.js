@@ -10,7 +10,7 @@ var options = {
   headers: config.api
 };
 
-app.set('views', __dirname + '/app/views');
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'app')));
 
