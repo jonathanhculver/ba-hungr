@@ -7,11 +7,11 @@
     var self = {};
 
     self.getRecipes = function() {
-      var promise = $q.defer();
+      var deferred = $q.defer();
       $http.get('/api/recipes').success(function(data) {
-        promise.resolve(data);
+        deferred.resolve(data);
       });
-      return promise;
+      return deferred.promise;
     };
 
     return self;
