@@ -5,3 +5,44 @@
 #hungr .col-xs-12 {
   padding: 0;
 }
+
+.recipe-card img {
+  width: 100%;
+}
+
+.recipe-card {
+  border: 1px solid #C8CBCA;
+}
+
+.recipe-sub-card {
+  padding-top: 20px;
+  padding-left: 20px;
+  border: 1px solid #C8CBCA;
+  border-top: 0;
+  float: left;
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+
+.main-text {
+  font-family: 'Signika', sans-serif;
+  color: #313567;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.sub-text {
+  color: #8B8B8B;
+  font-size: 14px;
+  font-style: italic;
+  font-family: 'Arvo';
+  font-weight: 300;
+}
+
+.bonus-card {
+  height: 10px;
+  border: 1px solid #C8CBCA;
+  border-top: 0;
+  background-color: #fff;
+}
