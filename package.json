@@ -10,7 +10,8 @@
   "dependencies" : {
     "express": "*",
     "path": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "request": "*"
   },
   "repository": {
     "type": "git",
