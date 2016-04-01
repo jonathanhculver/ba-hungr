@@ -2,13 +2,13 @@
 
   <div class="recipe-background-container">
 
-    <div class="swipe-container">
+    <div class="swipe-container" ng-class="recipe.swipeClass">
       <div class="row">
         <div class="col-xs-12">
           <div class="recipe-card">
             <img src="{{ recipe.current.c_main_dish_image.medium_feature }}" />
-            <img class="swipe-svg swipe-x-svg" src="/assets/svg/xhoverwhite.svg" />
-            <img class="swipe-svg swipe-star-svg" src="/assets/svg/starhoverwhite.svg" />
+            <img ng-show="recipe.swipedLeft" class="swipe-svg swipe-x-svg" src="/assets/svg/xhoverwhite.svg" />
+            <img ng-show="recipe.swipedRight" class="swipe-svg swipe-star-svg" src="/assets/svg/starhoverwhite.svg" />
           </div>
         </div>
       </div>
@@ -40,13 +40,13 @@
     <div class="circle circle-small circle-info">
         <img src="/assets/svg/info.svg" />
     </div>
-    <div class="circle circle-large circle-x">
+    <div class="circle circle-large circle-x" ng-click="recipe.swipeLeft()">
       <img src="/assets/svg/x.svg" />
     </div>
     <div class="circle circle-small circle-save">
       <img src="/assets/svg/bookmark.svg" />
     </div>
-    <div class="circle circle-large circle-star">
+    <div class="circle circle-large circle-star" ng-click="recipe.swipeRight()">
       <img src="/assets/svg/star.svg" />
     </div>
   </div>
