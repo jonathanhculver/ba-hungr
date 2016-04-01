@@ -1,5 +1,7 @@
 #hungr {
   background-color: #F0F2F7;
+  max-height: 600px;
+  overflow-y: hidden;
 }
 
 #hungr .col-xs-12 {
@@ -140,7 +142,6 @@
   width: 200px;
   margin: 0 auto;
   margin-top: 10px;
-  top: 10px;
 }
 
 .circle {
