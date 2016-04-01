@@ -3,8 +3,8 @@
     .module("hungr")
     .controller("RecipeController", RecipeController);
 
-  RecipeController.$inject = ['$scope', 'RecipeFactory', 'recipes'];
-  function RecipeController($scope, RecipeFactory, recipes) {
+  RecipeController.$inject = ['$scope', 'RecipeFactory', 'recipes', '$location'];
+  function RecipeController($scope, RecipeFactory, recipes, $location) {
     var self = this,
         index = 0,
         all = recipes.data,
@@ -56,7 +56,10 @@
           $swipeContainer = $('.swipe-container');
 
       $swipeSvg.hide();
-      self.next();
+      var isNext = self.next();
+      if(!isNext) {
+        $location.path("/palette");
+      }
       $scope.$apply(function() {
         $scope.current = self.current;
         $scope.last = self.last;

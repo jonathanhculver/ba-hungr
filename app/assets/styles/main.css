@@ -19,11 +19,12 @@
   border-top: 1px solid #ADAFB3;
   border-bottom: 1px solid #ADAFB3;
   float: left;
-  width: 100%;
+  width: 374px;
   top: 0;
   padding-left: 20px;
   z-index: 20;
   background-color: #F0F2F7;
+  padding-right: 20px;
 }
 
 .right {
@@ -44,16 +45,17 @@
 
 .logo img {
   margin-top: 10px;
-  width: 50%;
+  height: 27px;
 }
 
 .logo .ba-logo {
   height: 27px;
-  margin-left: -25px;
 }
 
 .logo .ba-heart {
+  height: 26px;
   margin-top: 11px;
+  margin-right: 20px;
 }
 
 .recipe-container {
@@ -111,7 +113,7 @@
   font-size: 26px;
   line-height: 1.2;
   font-weight: 600;
-  height: 32px;
+  height: 35px;
   overflow: hidden;
 }
 
