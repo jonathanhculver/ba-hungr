@@ -9,10 +9,10 @@
       restrict: 'E',
       templateUrl: '/templates/loading.html',
       link: function(scope, elem, attrs) {
-        scope.isRouteLoading = true;
+        scope.isRouteLoading = false;
 
         $rootScope.$on('$routeChangeStart', function() {
-          scope.isRouteLoading = false;
+          scope.isRouteLoading = true;
         });
 
         $rootScope.$on('$routeChangeSuccess', function() {

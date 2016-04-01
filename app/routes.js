@@ -20,8 +20,11 @@
         controllerAs: "palette",
         templateUrl: "/templates/palette.html"
       })
+      .when("/loading", {
+        templateUrl: "/templates/loading_2.html"
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/loading'
       });
     $locationProvider.html5Mode(true);
   }
