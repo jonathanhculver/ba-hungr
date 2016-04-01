@@ -6,6 +6,50 @@
   padding: 0;
 }
 
+#hungr .container {
+  margin-top: 50px;
+}
+
+.header {
+  height: 50px;
+  border-top: 1px solid #ADAFB3;
+  float: left;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding-left: 20px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.margin_r_20 {
+  margin-right: 20px;
+}
+
+.margin_l_20 {
+  margin-left: 20px;
+}
+
+.logo img {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.logo .ba-logo {
+  height: 27px;
+  margin-left: -25px;
+}
+
+.logo .ba-heart {
+  margin-top: 11px;
+}
+
 .recipe-card img {
   width: 100%;
 }
