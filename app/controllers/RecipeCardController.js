@@ -28,13 +28,15 @@
     this.last = index === num-1;
 
     $('.swipe-container').on('swiperight', function(e) {
-      var $target = $(e.currentTarget).find('.recipe-card img');
-      handleSwipe();
+      var $target = $(e.currentTarget);
+      $target.addClass('swipe-right').delay(700).fadeOut(1);
+      // handleSwipe();
     });
 
     $('.swipe-container').on('swipeleft', function(e) {
-      var $target = $(e.currentTarget).find('.recipe-card img');
-      handleSwipe();
+      var $target = $(e.currentTarget);
+      $target.addClass('swipe-left').delay(700).fadeOut(1);
+      // handleSwipe();
     });
 
     var handleSwipe = function() {

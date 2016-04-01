@@ -21,7 +21,13 @@
     <title>Hungr™</title>
   </head>
   <body id="hungr">
-    <div ng-include="'/templates/header.html'"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div ng-include="'/templates/header.html'"></div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div ng-view></div>
     </div>

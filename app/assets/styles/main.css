@@ -7,7 +7,7 @@
 }
 
 #hungr .container {
-  margin-top: 50px;
+  width: 374px;
 }
 
 .ui-loader {
@@ -20,7 +20,6 @@
   border-bottom: 1px solid #ADAFB3;
   float: left;
   width: 100%;
-  position: fixed;
   top: 0;
   padding-left: 20px;
   z-index: 20;
@@ -57,6 +56,10 @@
   margin-top: 11px;
 }
 
+.recipe-container {
+  position: relative;
+}
+
 .recipe-card img {
   width: 100%;
 }
@@ -72,6 +75,7 @@
   z-index: 10;
   padding-right: 14px;
   padding-left: 14px;
+  width: 372px;
 }
 
 .recipe-background-container {
@@ -84,7 +88,8 @@
 }
 
 .extra-cards {
-  float: left;
+  position: absolute;
+  bottom: 190px;
   width: 100%;
 }
 
@@ -129,6 +134,7 @@
   width: 200px;
   margin: 0 auto;
   margin-top: 10px;
+  top: 10px;
 }
 
 .circle {
@@ -188,10 +194,17 @@
 
 /* animations */
 
-.swipe-right {
-
+.swipe-left {
+  transform: rotate(-30deg);
+  transition: 1.5s;
+  opacity: 0;
+  margin-left: -400px;
 }
 
-.swipe-left
-
+.swipe-right {
+  transform: rotate(30deg);
+  transition: 1.5s;
+  margin-left: 400px;
+  opacity: 0;
+}
 
