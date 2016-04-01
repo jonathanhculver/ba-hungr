@@ -68,6 +68,7 @@
   border-left: 1px solid #ADAFB3;
   border-right: 1px solid #ADAFB3;
   border-bottom: 1px solid #ADAFB3;
+  position: relative;
 }
 
 .swipe-container {
@@ -206,5 +207,12 @@
   transition: 1.5s;
   margin-left: 400px;
   opacity: 0;
+}
+
+.swipe-svg {
+  display: none;
+  height: 80%;
+  position: absolute;
+  top: 30px;
 }
 

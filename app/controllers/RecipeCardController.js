@@ -28,13 +28,19 @@
     this.last = index === num-1;
 
     $('.swipe-container').on('swiperight', function(e) {
-      var $target = $(e.currentTarget);
+      var $target = $(e.currentTarget),
+          $star = $target.find('.swipe-star-svg');
+
+      $star.show();
       $target.addClass('swipe-right').delay(700).fadeOut(1);
       // handleSwipe();
     });
 
     $('.swipe-container').on('swipeleft', function(e) {
-      var $target = $(e.currentTarget);
+      var $target = $(e.currentTarget),
+          $x = $target.find('.swipe-x-svg');
+
+      $x.show();
       $target.addClass('swipe-left').delay(700).fadeOut(1);
       // handleSwipe();
     });
