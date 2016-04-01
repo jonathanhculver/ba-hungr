@@ -222,3 +222,32 @@
   top: 30px;
 }
 
+.palette-container {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.palette-container img {
+  width: 100%;
+}
+
+.loading {
+  margin: 0 auto;
+  width: 350px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.loading img {
+  width: 50%;
+}
+
+.fire-text {
+  font-style: italic;
+  font-size: 36px;
+  color: #313567;
+  font-family: "Arvo";
+  margin-top: 10px;
+}
+
