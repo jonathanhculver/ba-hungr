@@ -90,3 +90,68 @@
   border-top: 0;
   background-color: #fff;
 }
+
+.action-buttons {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.circle {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+}
+
+.circle img {
+  height: 75%;
+}
+
+.circle-large.circle-x img {
+  height: 60%;
+  margin-top: 15px;
+}
+
+.circle-small {
+  width: 50px;
+  height: 50px;
+}
+
+.circle-small img {
+  margin-top: 5px;
+}
+
+.circle-large {
+  width: 100px;
+  height: 100px;
+}
+
+.circle-large img {
+  margin-top: 5px;
+}
+
+.circle-save {
+  top: 135px;
+  left: 70px;
+}
+
+.circle-x {
+  top: 50px;
+  left: -35px;
+}
+
+.circle-info {
+  top: 20px;
+  left: 70px;
+}
+
+.circle-star {
+  top: 50px;
+  left: 125px;
+}
+
+
