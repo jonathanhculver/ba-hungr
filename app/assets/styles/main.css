@@ -10,14 +10,21 @@
   margin-top: 50px;
 }
 
+.ui-loader {
+  display: none !important;
+}
+
 .header {
   height: 50px;
   border-top: 1px solid #ADAFB3;
+  border-bottom: 1px solid #ADAFB3;
   float: left;
   width: 100%;
   position: fixed;
   top: 0;
   padding-left: 20px;
+  z-index: 20;
+  background-color: #F0F2F7;
 }
 
 .right {
@@ -55,13 +62,36 @@
 }
 
 .recipe-card {
-  border: 1px solid #C8CBCA;
+  border-left: 1px solid #ADAFB3;
+  border-right: 1px solid #ADAFB3;
+  border-bottom: 1px solid #ADAFB3;
+}
+
+.swipe-container {
+  float: left;
+  z-index: 10;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.recipe-background-container {
+  background-color: #fff;
+  height: 342px;
+  border-left: 1px solid #ADAFB3;
+  border-right: 1px solid #ADAFB3;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.extra-cards {
+  float: left;
+  width: 100%;
 }
 
 .recipe-sub-card {
   padding-top: 20px;
   padding-left: 20px;
-  border: 1px solid #C8CBCA;
+  border: 1px solid #ADAFB3;
   border-top: 0;
   float: left;
   padding-bottom: 20px;
@@ -87,9 +117,10 @@
 
 .bonus-card {
   height: 10px;
-  border: 1px solid #C8CBCA;
+  border: 1px solid #ADAFB3;
   border-top: 0;
   background-color: #fff;
+  width: 100%;
 }
 
 .action-buttons {
@@ -154,5 +185,13 @@
   top: 50px;
   left: 125px;
 }
+
+/* animations */
+
+.swipe-right {
+
+}
+
+.swipe-left
 
 
