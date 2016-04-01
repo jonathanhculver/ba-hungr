@@ -1,9 +1,48 @@
 <div class="recipe-container">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="recipe-card">
-        <img src="{{ recipe.at() }}" />
+
+  <div class="swipe-container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="recipe-card">
+          <img src="{{ recipe.current.c_main_dish_image.high_feature }}" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="recipe-sub-card">
+        <div class="col-xs-12">
+          <div class="main-text">{{ recipe.current.main_title }}</div>
+        </div>
+        <div class="col-xs-12">
+          <div class="sub-text">{{ recipe.current.sub_title }}</div>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="extra-cards" ng-if="!recipe.last">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="bonus-card"></div>
+        <div class="bonus-card"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <div class="circle circle-small circle-info">
+        <img src="/assets/svg/info.svg" />
+    </div>
+    <div class="circle circle-large circle-x">
+      <img src="/assets/svg/x.svg" />
+    </div>
+    <div class="circle circle-small circle-save">
+      <img src="/assets/svg/bookmark.svg" />
+    </div>
+    <div class="circle circle-large circle-star">
+      <img src="/assets/svg/star.svg" />
+    </div>
+  </div>
+
 </div>
