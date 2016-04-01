@@ -3,8 +3,8 @@
     .module("hungr")
     .controller("RecipeController", RecipeController);
 
-  RecipeController.$inject = ['$scope', 'RecipeFactory', 'recipes'];
-  function RecipeController($scope, RecipeFactory, recipes) {
+  RecipeController.$inject = ['$scope', 'RecipeFactory', 'recipes', '$location'];
+  function RecipeController($scope, RecipeFactory, recipes, $location) {
     var self = this,
         index = 0,
         all = recipes.data,
@@ -27,22 +27,47 @@
 
     this.last = index === num-1;
 
-    $('.swipe-container').on('swiperight', function(e) {
-      var $target = $(e.currentTarget).find('.recipe-card img');
-      handleSwipe();
+    $('body').on('swiperight', '.swipe-container', function(e) {
+      var $target = $(e.currentTarget),
+          $star = $target.find('.swipe-star-svg');
+
+      $star.show();
+      $target.addClass('swipe-right')
+             .delay(700)
+             .fadeOut(1)
+             .queue(handleSwipe);
     });
 
-    $('.swipe-container').on('swipeleft', function(e) {
-      var $target = $(e.currentTarget).find('.recipe-card img');
-      handleSwipe();
+    $('body').on('swipeleft', '.swipe-container',  function(e) {
+      var $target = $(e.currentTarget),
+          $x = $target.find('.swipe-x-svg');
+
+      $x.show();
+      $target.addClass('swipe-left')
+             .delay(700)
+             .fadeOut(1)
+             .queue(function(next) {
+                handleSwipe(next);
+             });
     });
 
-    var handleSwipe = function() {
-      self.next();
+    var handleSwipe = function(next) {
+      var $swipeSvg = $('.swipe-svg'),
+          $swipeContainer = $('.swipe-container');
+
+      $swipeSvg.hide();
+      var isNext = self.next();
+      if(!isNext) {
+        $location.path("/palette");
+      }
       $scope.$apply(function() {
         $scope.current = self.current;
         $scope.last = self.last;
       });
+      $swipeContainer.removeClass('swipe-left');
+      $swipeContainer.removeClass('swipe-right');
+      $swipeContainer.show();
+      next();
     };
   }
 })();

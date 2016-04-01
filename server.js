@@ -18,6 +18,10 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+app.get('/palette', function(req, res) {
+  res.render('index');
+});
+
 app.get('/api/recipes', function(req, res) {
   app.curl(function(json) {
     var response = app.parseRecipes(json);

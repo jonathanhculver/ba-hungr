@@ -7,17 +7,24 @@
 }
 
 #hungr .container {
-  margin-top: 50px;
+  width: 374px;
+}
+
+.ui-loader {
+  display: none !important;
 }
 
 .header {
   height: 50px;
   border-top: 1px solid #ADAFB3;
+  border-bottom: 1px solid #ADAFB3;
   float: left;
-  width: 100%;
-  position: fixed;
+  width: 374px;
   top: 0;
   padding-left: 20px;
+  z-index: 20;
+  background-color: #F0F2F7;
+  padding-right: 20px;
 }
 
 .right {
@@ -38,16 +45,21 @@
 
 .logo img {
   margin-top: 10px;
-  width: 50%;
+  height: 27px;
 }
 
 .logo .ba-logo {
   height: 27px;
-  margin-left: -25px;
 }
 
 .logo .ba-heart {
+  height: 26px;
   margin-top: 11px;
+  margin-right: 20px;
+}
+
+.recipe-container {
+  position: relative;
 }
 
 .recipe-card img {
@@ -55,13 +67,39 @@
 }
 
 .recipe-card {
-  border: 1px solid #C8CBCA;
+  border-left: 1px solid #ADAFB3;
+  border-right: 1px solid #ADAFB3;
+  border-bottom: 1px solid #ADAFB3;
+  position: relative;
+}
+
+.swipe-container {
+  float: left;
+  z-index: 10;
+  padding-right: 14px;
+  padding-left: 14px;
+  width: 372px;
+}
+
+.recipe-background-container {
+  background-color: #fff;
+  height: 342px;
+  border-left: 1px solid #ADAFB3;
+  border-right: 1px solid #ADAFB3;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.extra-cards {
+  position: absolute;
+  bottom: 190px;
+  width: 100%;
 }
 
 .recipe-sub-card {
   padding-top: 20px;
   padding-left: 20px;
-  border: 1px solid #C8CBCA;
+  border: 1px solid #ADAFB3;
   border-top: 0;
   float: left;
   padding-bottom: 20px;
@@ -75,21 +113,25 @@
   font-size: 26px;
   line-height: 1.2;
   font-weight: 600;
+  height: 35px;
+  overflow: hidden;
 }
 
 .sub-text {
   color: #8B8B8B;
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
   font-family: 'Arvo';
   font-weight: 300;
+  padding-right: 10px;
 }
 
 .bonus-card {
   height: 10px;
-  border: 1px solid #C8CBCA;
+  border: 1px solid #ADAFB3;
   border-top: 0;
   background-color: #fff;
+  width: 100%;
 }
 
 .action-buttons {
@@ -98,6 +140,7 @@
   width: 200px;
   margin: 0 auto;
   margin-top: 10px;
+  top: 10px;
 }
 
 .circle {
@@ -155,4 +198,26 @@
   left: 125px;
 }
 
+/* animations */
+
+.swipe-left {
+  transform: rotate(-30deg);
+  transition: 1.5s;
+  opacity: 0;
+  margin-left: -400px;
+}
+
+.swipe-right {
+  transform: rotate(30deg);
+  transition: 1.5s;
+  margin-left: 400px;
+  opacity: 0;
+}
+
+.swipe-svg {
+  display: none;
+  height: 80%;
+  position: absolute;
+  top: 30px;
+}
 

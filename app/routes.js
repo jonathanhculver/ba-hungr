@@ -14,6 +14,14 @@
         resolve: {
           recipes: getRecipesService
         }
+      })
+      .when("/palette", {
+        controller: "PaletteController",
+        controllerAs: "palette",
+        templateUrl: "/templates/palette.html"
+      })
+      .otherwise({
+        redirectTo: '/'
       });
     $locationProvider.html5Mode(true);
   }
