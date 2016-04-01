@@ -18,18 +18,31 @@
 
     this.next = function() {
       if(index !== num-1) {
-        return all[index++];
-      }
-      return false;
-    };
-
-    this.previous = function() {
-      if(index !== 0) {
-        return all[index--];
+        self.current= all[++index];
+        self.last = index === num-1;
+        return self.current;
       }
       return false;
     };
 
     this.last = index === num-1;
+
+    $('.swipe-container').on('swiperight', function(e) {
+      var $target = $(e.currentTarget).find('.recipe-card img');
+      handleSwipe();
+    });
+
+    $('.swipe-container').on('swipeleft', function(e) {
+      var $target = $(e.currentTarget).find('.recipe-card img');
+      handleSwipe();
+    });
+
+    var handleSwipe = function() {
+      self.next();
+      $scope.$apply(function() {
+        $scope.current = self.current;
+        $scope.last = self.last;
+      });
+    };
   }
 })();

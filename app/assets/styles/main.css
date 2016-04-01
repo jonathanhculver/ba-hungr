@@ -66,12 +66,13 @@
   float: left;
   padding-bottom: 20px;
   background-color: #fff;
+  width: 100%;
 }
 
 .main-text {
   font-family: 'Signika', sans-serif;
   color: #313567;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.2;
   font-weight: 600;
 }
