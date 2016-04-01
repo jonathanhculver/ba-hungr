@@ -11,10 +11,9 @@
         num = all.length;
 
     this.current = all[index];
-
-    var getImage = function(obj) {
-      return obj.c_main_dish_image.high_feature;
-    };
+    this.swipeClass = '';
+    this.swipedRight = false;
+    this.swipedLeft = false;
 
     this.next = function() {
       if(index !== num-1) {
@@ -28,10 +27,12 @@
     this.last = index === num-1;
 
     $('body').on('swiperight', '.swipe-container', function(e) {
-      var $target = $(e.currentTarget),
-          $star = $target.find('.swipe-star-svg');
+      var $target = $(e.currentTarget);
 
-      $star.show();
+      self.swipedRight = true;
+      $scope.$apply(function() {
+        $scope.swipedRight = self.swipedRight;
+      });
       $target.addClass('swipe-right')
              .delay(700)
              .fadeOut(1)
@@ -39,10 +40,12 @@
     });
 
     $('body').on('swipeleft', '.swipe-container',  function(e) {
-      var $target = $(e.currentTarget),
-          $x = $target.find('.swipe-x-svg');
+      var $target = $(e.currentTarget);
 
-      $x.show();
+      self.swipedLeft = true;
+      $scope.$apply(function() {
+        $scope.swipedLeft = self.swipedLeft;
+      });
       $target.addClass('swipe-left')
              .delay(700)
              .fadeOut(1)
@@ -51,15 +54,42 @@
              });
     });
 
-    var handleSwipe = function(next) {
-      var $swipeSvg = $('.swipe-svg'),
-          $swipeContainer = $('.swipe-container');
+    this.swipeRight = function() {
+      self.swipeClass = 'swipe-right';
+      self.swipedRight = true;
+      setTimeout(function() {
+        reset();
+      }, 700);
+    };
 
-      $swipeSvg.hide();
+    this.swipeLeft = function() {
+      self.swipeClass = 'swipe-left';
+      self.swipedLeft = true;
+      setTimeout(function() {
+        reset();
+      }, 700);
+    };
+
+    var reset = function() {
+      self.swipeClass = '';
+      self.swipedLeft = false;
+      self.swipedRight = false;
+      var isNext = self.next();
+      $scope.$apply(function() {
+        $scope.current = self.current;
+        $scope.last = self.last;
+      });
+    };
+
+    var handleSwipe = function(next) {
+      var $swipeContainer = $('.swipe-container');
+
       var isNext = self.next();
       if(!isNext) {
         $location.path("/palette");
       }
+      self.swipedRight = false;
+      self.swipedLeft = false;
       $scope.$apply(function() {
         $scope.current = self.current;
         $scope.last = self.last;
