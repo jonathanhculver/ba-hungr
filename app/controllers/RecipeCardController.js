@@ -14,28 +14,34 @@
     this.swipeClass = '';
     this.swipedRight = false;
     this.swipedLeft = false;
+    this.last = false;
 
     var nextRecipe = function() {
       if(index !== num-1) {
         self.current= all[++index];
-        self.last = index === num-1;
       }
+      self.last = index === num-1;
     };
-
-    this.last = index === num-1;
 
     this.swipe = function(direction) {
       self.swipeClass = 'swipe-'+direction;
-      direction === 'left' ? self.swipedLeft = true : self.swipedRight = true;
+      if(direction === 'left') {
+        self.swipedLeft = true;
+      } else {
+        self.swipedRight = true;
+      }
       $timeout(reset, 700);
     };
 
     var reset = function() {
       self.swipedLeft = false;
       self.swipedRight = false;
-      nextRecipe();
-      if(!self.last) {
+      if(self.last) {
+        index = 0;
+        self.current = all[0];
         $location.path("/palette");
+      } else {
+        nextRecipe();
       }
       self.swipeClass = '';
     };

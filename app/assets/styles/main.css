@@ -203,14 +203,14 @@
 
 .swipe-left {
   transform: rotate(-30deg);
-  transition: 1.5s;
+  transition: 1.0s;
   opacity: 0;
   margin-left: -400px;
 }
 
 .swipe-right {
   transform: rotate(30deg);
-  transition: 1.5s;
+  transition: 1.0s;
   margin-left: 400px;
   opacity: 0;
 }
