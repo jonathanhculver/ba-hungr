@@ -18,11 +18,11 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.get('/palette', function(req, res) {
+app.get('/recipes', function(req, res) {
   res.render('index');
 });
 
-app.get('/loading', function(req, res) {
+app.get('/palette', function(req, res) {
   res.render('index');
 });
 

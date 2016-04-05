@@ -8,6 +8,9 @@
   function config($routeProvider, $locationProvider) {
     $routeProvider
       .when("/", {
+        templateUrl: "/templates/loading_2.html"
+      })
+      .when("/recipes", {
         controller: "RecipeController",
         controllerAs: "recipe",
         templateUrl: "/templates/recipecard.html",
@@ -20,11 +23,8 @@
         controllerAs: "palette",
         templateUrl: "/templates/palette.html"
       })
-      .when("/loading", {
-        templateUrl: "/templates/loading_2.html"
-      })
       .otherwise({
-        redirectTo: '/loading'
+        redirectTo: '/'
       });
     $locationProvider.html5Mode(true);
   }

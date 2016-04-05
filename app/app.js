@@ -2,6 +2,7 @@
   //configuration
   angular
     .module('hungr', [
-      'ngRoute'
+      'ngRoute',
+      'ngTouch'
   ]);
 })();
