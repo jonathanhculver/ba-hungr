@@ -30,7 +30,7 @@
       } else {
         self.swipedRight = true;
       }
-      $timeout(reset, 700);
+      $timeout(reset, 900);
     };
 
     var reset = function() {
